@@ -4,246 +4,391 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calibratech - Soluções em Calibrações</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="assets/calibratech_logo-removebg-preview.png" alt="Calibratech Logo">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/calibratech_logo-removebg-preview.png" alt="Calibratech Logo" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Calibratech Soluções em Calibrações LTDA</h1>
-            <h2>Garanta a Segurança e Eficiência dos Seus Equipamentos</h2>
-            <p>Na Calibratech, somos especialistas em inspeções de segurança e calibrações de precisão para seus equipamentos industriais. Com foco na Norma Regulamentadora NR-13, oferecemos soluções completas para caldeiras, vasos de pressão, manômetros, válvulas de segurança e pressostatos, além de testes de estanqueidade e hidrostáticos.</p>
-            <a href="#contato" class="btn">Solicite um Orçamento Grátis</a>
-        </div>
-    </section>
-
-    <section id="servicos" class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <p>Oferecemos uma gama completa de serviços para garantir a conformidade e o desempenho de seus equipamentos:</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h3>Inspeção NR-13</h3>
-                    <p>Realizamos inspeções completas em caldeiras e vasos de pressão, assegurando a conformidade com a NR-13 e a segurança de suas operações.</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Calibração de Instrumentos</h3>
-                    <p>Calibramos manômetros, válvulas de segurança e pressostatos com rastreabilidade, garantindo leituras precisas e o funcionamento adequado de seus sistemas.</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-search"></i>
-                    <h3>Testes de Estanqueidade</h3>
-                    <p>Identificamos e corrigimos vazamentos em sistemas pressurizados, prevenindo perdas e garantindo a integridade do seu processo.</p>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-tint"></i>
-                    <h3>Testes Hidrostáticos</h3>
-                    <p>Realizamos testes hidrostáticos em vasos e tubulações, verificando a resistência e a segurança sob pressão.</p>
+    <section class="hero py-5 mt-5 text-center text-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Calibratech Soluções em Calibrações LTDA</h1>
+                    <h2 class="h3 text-warning mb-4">Garanta a Segurança e Eficiência dos Seus Equipamentos</h2>
+                    <p class="lead mb-4">Na Calibratech, somos especialistas em inspeções de segurança e calibrações de precisão para seus equipamentos industriais. Com foco na Norma Regulamentadora NR-13, oferecemos soluções completas para caldeiras, vasos de pressão, manômetros, válvulas de segurança e pressostatos, além de testes de estanqueidade e hidrostáticos.</p>
+                    <a href="#contato" class="btn btn-warning btn-lg">Solicite um Orçamento Grátis</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sobre" class="why-us">
-        <div class="container">
-            <h2>Por Que Escolher a Calibratech?</h2>
-            <div class="features">
-                <div class="feature">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Especialização NR-13</h3>
-                    <p>Nosso conhecimento aprofundado na NR-13 garante que seus equipamentos estejam sempre em conformidade com as regulamentações mais rigorosas.</p>
-                </div>
-                
-                <div class="feature">
-                    <i class="fas fa-check-double"></i>
-                    <h3>Precisão e Confiabilidade</h3>
-                    <p>Utilizamos equipamentos de ponta e métodos rigorosos para assegurar a máxima precisão em todas as calibrações e inspeções.</p>
-                </div>
-                
-                <div class="feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Segurança em Primeiro Lugar</h3>
-                    <p>Acreditamos que a prevenção é a melhor forma de proteger sua equipe e seus ativos. Nossos serviços são projetados para minimizar riscos e otimizar a segurança.</p>
-                </div>
-                
-                <div class="feature">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Agilidade e Flexibilidade</h3>
-                    <p>Entendemos a urgência de suas demandas e nos adaptamos às suas necessidades, oferecendo soluções eficientes e com prazos competitivos.</p>
-                </div>
-                
-                <div class="feature">
-                    <i class="fas fa-users"></i>
-                    <h3>Equipe Qualificada</h3>
-                    <p>Nossos técnicos são altamente treinados e experientes, prontos para oferecer um serviço de excelência e suporte técnico especializado.</p>
-                </div>
+    <section id="servicos" class="services py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nossos Serviços</h2>
+                <p class="lead">Oferecemos uma gama completa de serviços para garantir a conformidade e o desempenho de seus equipamentos:</p>
             </div>
             
-            <div class="cta">
-                <h2>Otimize a Performance e a Segurança da Sua Indústria!</h2>
-                <p>Não arrisque a segurança e a eficiência de suas operações. Entre em contato com a Calibratech e descubra como podemos ajudar sua empresa a se manter em conformidade e a operar com máxima performance.</p>
-                <a href="#contato" class="btn">Solicite um Orçamento Grátis</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="depoimentos" class="testimonials">
-        <div class="container">
-            <h2>Depoimentos de Clientes</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"A Calibratech nos ajudou a garantir que nossas caldeiras estivessem perfeitamente dentro das normas. Profissionais competentes e serviço de alta qualidade!"</p>
-                    <div class="client">
-                        <span class="name">Cliente Satisfeito</span>
-                        <span class="company">Empresa Industrial</span>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-clipboard-check fa-3x text-primary mb-3"></i>
+                            <h3 class="h4 card-title">Inspeção NR-13</h3>
+                            <p class="card-text">Realizamos inspeções completas em caldeiras e vasos de pressão, assegurando a conformidade com a NR-13 e a segurança de suas operações.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="testimonial">
-                    <p>"Precisávamos de uma calibração urgente de manômetros e a Calibratech atendeu com agilidade e precisão. Excelente trabalho!"</p>
-                    <div class="client">
-                        <span class="name">Cliente Satisfeito</span>
-                        <span class="company">Empresa de Manufatura</span>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-tools fa-3x text-primary mb-3"></i>
+                            <h3 class="h4 card-title">Calibração de Instrumentos</h3>
+                            <p class="card-text">Calibramos manômetros, válvulas de segurança e pressostatos com rastreabilidade, garantindo leituras precisas e o funcionamento adequado de seus sistemas.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slider-controls">
-                <button id="prev-testimonial" aria-label="Depoimento anterior"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-testimonial" aria-label="Próximo depoimento"><i class="fas fa-chevron-right"></i></button>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-search fa-3x text-primary mb-3"></i>
+                            <h3 class="h4 card-title">Testes de Estanqueidade</h3>
+                            <p class="card-text">Identificamos e corrigimos vazamentos em sistemas pressurizados, prevenindo perdas e garantindo a integridade do seu processo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-tint fa-3x text-primary mb-3"></i>
+                            <h3 class="h4 card-title">Testes Hidrostáticos</h3>
+                            <p class="card-text">Realizamos testes hidrostáticos em vasos e tubulações, verificando a resistência e a segurança sob pressão.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        Quais são os prazos para as inspeções NR-13?
-                        <i class="fas fa-chevron-down"></i>
+    <section id="sobre" class="why-us py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Por Que Escolher a Calibratech?</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                            <i class="fas fa-certificate fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold">Especialização NR-13</h3>
+                            <p>Nosso conhecimento aprofundado na NR-13 garante que seus equipamentos estejam sempre em conformidade com as regulamentações mais rigorosas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                            <i class="fas fa-check-double fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold">Precisão e Confiabilidade</h3>
+                            <p>Utilizamos equipamentos de ponta e métodos rigorosos para assegurar a máxima precisão em todas as calibrações e inspeções.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                            <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold">Segurança em Primeiro Lugar</h3>
+                            <p>Acreditamos que a prevenção é a melhor forma de proteger sua equipe e seus ativos. Nossos serviços são projetados para minimizar riscos e otimizar a segurança.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                            <i class="fas fa-bolt fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold">Agilidade e Flexibilidade</h3>
+                            <p>Entendemos a urgência de suas demandas e nos adaptamos às suas necessidades, oferecendo soluções eficientes e com prazos competitivos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                            <i class="fas fa-users fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="h5 fw-bold">Equipe Qualificada</h3>
+                            <p>Nossos técnicos são altamente treinados e experientes, prontos para oferecer um serviço de excelência e suporte técnico especializado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-light rounded-3 p-4 p-md-5 mt-5 text-center">
+                <h2 class="fw-bold">Otimize a Performance e a Segurança da Sua Indústria!</h2>
+                <p class="lead mb-4">Não arrisque a segurança e a eficiência de suas operações. Entre em contato com a Calibratech e descubra como podemos ajudar sua empresa a se manter em conformidade e a operar com máxima performance.</p>
+                <a href="#contato" class="btn btn-warning btn-lg">Solicite um Orçamento Grátis</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Depoimentos de Clientes</h2>
+            </div>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card border-0 shadow mx-auto" style="max-width: 700px;">
+                            <div class="card-body p-4 p-md-5 text-center">
+                                <p class="lead fst-italic mb-4">"A Calibratech nos ajudou a garantir que nossas caldeiras estivessem perfeitamente dentro das normas. Profissionais competentes e serviço de alta qualidade!"</p>
+                                <div class="d-flex justify-content-center">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Cliente Satisfeito</h5>
+                                        <p class="text-muted mb-0">Empresa Industrial</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="card border-0 shadow mx-auto" style="max-width: 700px;">
+                            <div class="card-body p-4 p-md-5 text-center">
+                                <p class="lead fst-italic mb-4">"Precisávamos de uma calibração urgente de manômetros e a Calibratech atendeu com agilidade e precisão. Excelente trabalho!"</p>
+                                <div class="d-flex justify-content-center">
+                                    <div>
+                                        <h5 class="fw-bold mb-1">Cliente Satisfeito</h5>
+                                        <p class="text-muted mb-0">Empresa de Manufatura</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-center mt-4">
+                    <button class="btn btn-sm btn-outline-primary mx-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <i class="fas fa-chevron-left"></i>
                     </button>
-                    <div class="accordion-content">
-                        <p>Os prazos variam de acordo com o tipo e a complexidade do equipamento. Entre em contato para uma avaliação personalizada.</p>
+                    <button class="btn btn-sm btn-outline-primary mx-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Perguntas Frequentes</h2>
+            </div>
+            
+            <div class="accordion accordion-flush mx-auto" id="faqAccordion" style="max-width: 800px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            Quais são os prazos para as inspeções NR-13?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Os prazos variam de acordo com o tipo e a complexidade do equipamento. Entre em contato para uma avaliação personalizada.</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="accordion-item">
-                    <button class="accordion-header">
-                        Vocês emitem certificados de calibração?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Sim, emitimos certificados de calibração com rastreabilidade, válidos para auditorias e comprovação de conformidade.</p>
+                    <h2 class="accordion-header" id="faqHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Vocês emitem certificados de calibração?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Sim, emitimos certificados de calibração com rastreabilidade, válidos para auditorias e comprovação de conformidade.</p>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="accordion-item">
-                    <button class="accordion-header">
-                        A Calibratech atende em todo o Brasil?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Atendemos diversas regiões. Consulte-nos para verificar a disponibilidade de atendimento em sua localidade.</p>
+                    <h2 class="accordion-header" id="faqHeading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            A Calibratech atende em todo o Brasil?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <p>Atendemos diversas regiões. Consulte-nos para verificar a disponibilidade de atendimento em sua localidade.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contact">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p>Estamos prontos para atender suas necessidades.</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>Telefone: <a href="tel:+5500000000000">(85) 9 9683-3372</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>E-mail: <a href="mailto:contato@calibratech.com.br">calibratechce@gmail.com</a></p>
-                </div>
-                
+    <section id="contato" class="contact py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Entre em Contato</h2>
+                <p class="lead">Estamos prontos para atender suas necessidades.</p>
             </div>
             
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                            <h3 class="h5 card-title">Telefone</h3>
+                            <p class="card-text"><a href="tel:+5585996833372" class="text-decoration-none">(85) 9 9683-3372</a></p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                            <h3 class="h5 card-title">E-mail</h3>
+                            <p class="card-text"><a href="mailto:calibratechce@gmail.com" class="text-decoration-none">calibratechce@gmail.com</a></p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
+                                            <label for="name">Nome</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+                                            <label for="email">E-mail</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Seu telefone">
+                                            <label for="phone">Telefone</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="company" name="company" placeholder="Sua empresa">
+                                            <label for="company">Empresa</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Sua mensagem" style="height: 150px" required></textarea>
+                                            <label for="message">Mensagem</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Enviar Mensagem</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="company">Empresa</label>
-                    <input type="text" id="company" name="company">
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/calibratech_logo-removebg-preview.png" alt="Calibratech Logo">
-                    <p>Calibratech Soluções em Calibrações LTDA</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <img src="assets/calibratech_logo-removebg-preview.png" alt="Calibratech Logo" height="80" class="mb-3">
+                    <p class="mb-0">Calibratech Soluções em Calibrações LTDA</p>
                 </div>
                 
-                <div class="social-media">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="mb-3">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; <span id="current-year"></span> Calibratech Soluções em Calibrações LTDA. Todos os direitos reservados.</p>
+            <hr class="my-4">
+            
+            <div class="text-center">
+                <p class="mb-0">&copy; <span id="current-year"></span> Calibratech Soluções em Calibrações LTDA. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
