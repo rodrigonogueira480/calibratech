@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS
-    emailjs.init('iQRzEJrF_yKvmu-Ah');
-    
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
@@ -33,44 +30,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission
+    // Form submission with mailto fallback
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
-            // Show loading state
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-            
             // Get form data
-            const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || 'Não informado',
-                company: document.getElementById('company').value || 'Não informado',
-                message: document.getElementById('message').value,
-                to_email: 'calibratechce@gmail.com'
-            };
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
             
-            // Send email using EmailJS
-            emailjs.send('service_gmail_calibra', 'template_contact_form', templateParams)
-                .then(function(response) {
-                    alert('Obrigado por entrar em contato! Retornaremos em breve.');
-                    contactForm.reset();
-                }, function(error) {
-                    console.error('Erro:', error);
-                    alert('Erro ao enviar mensagem. Tente novamente.');
-                })
-                .finally(function() {
-                    // Reset button state
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                });
+            // Create email content
+            const subject = `Novo contato do site - ${name}`;
+            const body = `Novo contato recebido pelo site da Calibratech:
+
+Nome: ${name}
+Email: ${email}
+Telefone: ${phone || 'Não informado'}
+Empresa: ${company || 'Não informado'}
+
+Mensagem:
+${message}`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:calibratechce@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message and reset form
+            alert('Seu cliente de email será aberto para enviar a mensagem.');
+            contactForm.reset();
         });
     }
 });

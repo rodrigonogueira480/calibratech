@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS
-    emailjs.init('iQRzEJrF_yKvmu-Ah');
-    
     // Set current year in footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
@@ -33,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission
+    // Form submission using Formspree
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -48,29 +45,38 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
             
             // Get form data
-            const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value || 'Não informado',
-                company: document.getElementById('company').value || 'Não informado',
-                message: document.getElementById('message').value,
-                to_email: 'calibratechce@gmail.com'
-            };
+            const formData = new FormData();
+            formData.append('name', document.getElementById('name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('phone', document.getElementById('phone').value || 'Não informado');
+            formData.append('company', document.getElementById('company').value || 'Não informado');
+            formData.append('message', document.getElementById('message').value);
+            formData.append('_replyto', document.getElementById('email').value);
+            formData.append('_subject', `Novo contato do site - ${document.getElementById('name').value}`);
             
-            // Send email using EmailJS
-            emailjs.send('service_gmail_calibra', 'template_contact_form', templateParams)
-                .then(function(response) {
+            try {
+                const response = await fetch('https://formspree.io/f/xpzvgqpb', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
                     alert('Obrigado por entrar em contato! Retornaremos em breve.');
                     contactForm.reset();
-                }, function(error) {
-                    console.error('Erro:', error);
+                } else {
                     alert('Erro ao enviar mensagem. Tente novamente.');
-                })
-                .finally(function() {
-                    // Reset button state
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                });
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao enviar mensagem. Tente novamente.');
+            } finally {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });
